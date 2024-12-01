@@ -1,9 +1,13 @@
 {
     "rust-analyzer.rustfmt.overrideCommand": ["leptosfmt", "--stdin", "--rustfmt"],
     "tailwindCSS.includeLanguages": {
-        "rust": "html"
+        "rust": "html",
+        "*.rs": "html"
     },
     "conventionalCommits.scopes": [
         "workspace"
+    ],
+    "tailwindCSS.experimental.classRegex": [
+        ["class_names!\\([^)]*\\)", "\"[^\"]\""]
     ]
 }

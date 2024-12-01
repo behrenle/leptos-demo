@@ -1,0 +1,9 @@
+[build]
+target = "index.html"
+dist = "dist"
+minify = "on_release"
+
+[[hooks]]
+stage = "pre_build"
+command = "sh"
+command_arguments = ["-c", "NODE_PATH=$(npm root --quiet -g) npx -y tailwindcss -i src/tailwind.css -o $TRUNK_STAGING_DIR/tailwind.css"]
