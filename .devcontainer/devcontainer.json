@@ -1,0 +1,21 @@
+{
+    "name": "devsummit-2024",
+    "image": "mcr.microsoft.com/devcontainers/rust:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "vivaxy.vscode-conventional-commits",
+                "bradlc.vscode-tailwindcss",
+                "xoronic.pestfile",
+                "ms-playwright.playwright",
+                "github.vscode-github-actions"
+            ]
+        }
+    },
+    "forwardPorts": [8080],
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": "bash ./.devcontainer/post-create.sh"
+}

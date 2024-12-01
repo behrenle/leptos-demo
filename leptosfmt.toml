@@ -1,0 +1,4 @@
+max_width = 80
+
+[attr_values]
+class = "Tailwind" 
